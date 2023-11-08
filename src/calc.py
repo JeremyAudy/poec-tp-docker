@@ -3,7 +3,7 @@
 
 
 def apply_vat(price: float, percent: float):
-    """if not isinstance(price, float):
+    if not isinstance(price, float):
         raise ValueError(f'Price (${price}) is not a number')
     elif not isinstance(percent, float):
         raise ValueError(f'Percent ({percent}%)')
@@ -13,10 +13,5 @@ def apply_vat(price: float, percent: float):
         raise ValueError(f'Percentage ({percent}%) is negative')
     elif percent > 100:
         raise ValueError(f'Percentage ({percent}%) is to high')
-    else:"""
-    return price + ((percent/100) * price)
-    
-
-if __name__ == '__main__':
-    
-    print(apply_vat(100, 25))
+    else:
+        return price + ((percent/100) * price)
